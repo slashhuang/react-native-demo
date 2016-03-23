@@ -1,0 +1,56 @@
+{
+  "name": "react-native-navigationbar",
+  "version": "0.1.3",
+  "author": {
+    "name": "poberWong"
+  },
+  "main": "lib/index.js",
+  "description": "navigationbar provided for navigator",
+  "files": [
+    "lib"
+  ],
+  "bugs": {
+    "url": "https://github.com/Bob1993/react-native-navigationbar",
+    "email": "poberwong@gmail.com"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "babel-eslint": "^4.1.6",
+    "eslint": "^1.10.3",
+    "eslint-config-standard": "^4.4.0",
+    "eslint-config-standard-react": "^1.2.1",
+    "eslint-plugin-react": "^3.15.0",
+    "eslint-plugin-standard": "^1.3.1"
+  },
+  "gitHead": "c16a5a955716363b4fd65007af7bc60a3a3b9de8",
+  "_id": "react-native-navigationbar@0.1.3",
+  "scripts": {},
+  "_shasum": "a4638c9d615da1ccd8e7c66a4d85ed1026e45771",
+  "_from": "react-native-navigationbar@>=0.1.3 <0.2.0",
+  "_npmVersion": "3.3.12",
+  "_nodeVersion": "5.5.0",
+  "_npmUser": {
+    "name": "poberwong",
+    "email": "bob1993.dev@gmail.com"
+  },
+  "dist": {
+    "shasum": "a4638c9d615da1ccd8e7c66a4d85ed1026e45771",
+    "size": 2182,
+    "noattachment": false,
+    "tarball": "http://registry.npm.taobao.org/react-native-navigationbar/download/react-native-navigationbar-0.1.3.tgz"
+  },
+  "maintainers": [
+    {
+      "name": "poberwong",
+      "email": "bob1993.dev@gmail.com"
+    }
+  ],
+  "_npmOperationalInternal": {
+    "host": "packages-5-east.internal.npmjs.com",
+    "tmp": "tmp/react-native-navigationbar-0.1.3.tgz_1455594137536_0.9846151610836387"
+  },
+  "directories": {},
+  "publish_time": 1455594141065,
+  "_cnpm_publish_time": 1455594141065,
+  "_resolved": "https://registry.npm.taobao.org/react-native-navigationbar/download/react-native-navigationbar-0.1.3.tgz"
+}

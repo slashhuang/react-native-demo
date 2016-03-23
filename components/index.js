@@ -10,15 +10,22 @@ import React,{
     TouchableHighlight
 } from 'react-native';
 
+//引入博客webview
+import Blog from './webview/slashhuang.js';
+
 class HomePage extends Component {
     constructor(props) {
         super(props)
     }
-    press(){
+    jumpToWebWiew(){
+        /**
+         * @ TODO 改变navigation title颜色
+         */
        console.log(this.props);
-        let nav = this.props.navigator;
-        nav.props.barTnitColor='red';
-        nav.props.tintColor='red';
+       this.props.navigator.push({
+            component:Blog,
+            url:'http://slashhuang.github.io'
+        })
     }
     longPress(){
         alert('simulate longPress')
@@ -51,7 +58,7 @@ class HomePage extends Component {
                     <TouchableHighlight style={styles.linkToBlog}
                                         underlayColor={'#222'}//触摸操作，显示的底层颜色
                                         delayLongPress={1000}//延迟长按相应时间
-                                        onPress={this.press.bind(this)}
+                                        onPress={this.jumpToWebWiew.bind(this)}
                                         onLongPress={this.longPress}
                         >
                         <View>
