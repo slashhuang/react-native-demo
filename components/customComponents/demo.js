@@ -11,8 +11,6 @@ import NavigationBar from '../lib/react-native-navigationbar/lib/index.js';//引
 export default class DemoView extends Component{
     constructor(props){
         super(props);
-        console.log('in demo')
-        console.log(props);
     }
     render(){
         return(

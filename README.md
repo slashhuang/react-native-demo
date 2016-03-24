@@ -1,4 +1,4 @@
-## react-native-tutorial
+## react-native-demo
 > 本项目综合了如下react-native组件
 
 - Navigator   路由
