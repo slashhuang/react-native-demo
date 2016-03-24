@@ -12,6 +12,8 @@ import React,{
 
 //引入博客webview
 import Blog from './webview/slashhuang.js';
+//引入自定义的IOS组件界面
+import CustomComponents from './customComponents/index.js';
 
 class HomePage extends Component {
     constructor(props) {
@@ -21,11 +23,17 @@ class HomePage extends Component {
         /**
          * @ TODO 改变navigation title颜色
          */
-       console.log(this.props);
        this.props.navigator.push({
             component:Blog,
             url:'http://slashhuang.github.io'
         })
+    }
+    jumpToCustomItems(){
+       this.props.navigator.push({
+           component:CustomComponents,
+           title:'查看自定义IOS组件'
+       })
+
     }
     longPress(){
         alert('simulate longPress')
@@ -55,7 +63,7 @@ class HomePage extends Component {
                             你以为我刀枪不入， 我以为你百毒不侵。</Text>
                         <Text style={styles.dateAuthor}>作者:徐志摩</Text>
                     </View>
-                    <TouchableHighlight style={styles.linkToBlog}
+                    <TouchableHighlight style={styles.touchHighLight}
                                         underlayColor={'#222'}//触摸操作，显示的底层颜色
                                         delayLongPress={1000}//延迟长按相应时间
                                         onPress={this.jumpToWebWiew.bind(this)}
@@ -63,6 +71,16 @@ class HomePage extends Component {
                         >
                         <View>
                             <Text style={styles.toHistory}>查看作者其他博客</Text>
+                        </View>
+                    </TouchableHighlight>
+                    <TouchableHighlight style={styles.touchHighLight}
+                                        underlayColor={'#222'}//触摸操作，显示的底层颜色
+                                        delayLongPress={1000}//延迟长按相应时间
+                                        onPress={this.jumpToCustomItems.bind(this)}
+                                        onLongPress={this.longPress}
+                        >
+                        <View>
+                            <Text style={styles.toHistory}>查看IOS组件</Text>
                         </View>
                     </TouchableHighlight>
                 </View>
@@ -128,7 +146,7 @@ var styles = StyleSheet.create({
         left: 10,
         bottom: 18
     },
-    linkToBlog:{
+    touchHighLight:{
         flex:1,
         marginBottom:17,
         backgroundColor: '#434243',
