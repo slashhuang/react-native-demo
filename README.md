@@ -6,6 +6,7 @@
 - TouchableHighlight   点按动作
 - View  布局
 - Text 文本
+- react-native-swiper 图片浏览
 - 自定义组件 
 
 ### 首页展示了自定义的IOS组件和Webview入口
@@ -16,3 +17,11 @@
   open mockTMall.xcodeproj
   
 ```
+#### 效果图
+<div style={width:100%;}}>
+<img src='./Assets/index.jpg' width='50%'>
+<img src='./Assets/imgSlider.jpg' width='50%'>
+<img src='./Assets/webview.jpg' width='50%'>
+</div>
+
+

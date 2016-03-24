@@ -30,7 +30,6 @@ export default class Blog extends Component{
         var progress = this.state.progress + offset;
         //这种函数逼近，让状态条显示更逼真
         var calculateLimitation = Math.sin(progress/(progress+150)*(Math.PI/2))%1
-        console.log(calculateLimitation);
         return calculateLimitation
     }
     updateProgress() {

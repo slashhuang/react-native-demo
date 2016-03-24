@@ -7,12 +7,8 @@ import React,{
     Component
 } from 'react-native'
 import DemoView from './demo.js';//demo展示窗口
-/**
- * 组件
- */
-import List from '../lib/List.js';//引入列表组件
-import Slider from '../lib/Slider.js';//引入图片浏览插件
 import NavigationBar from '../lib/react-native-navigationbar/lib/index.js';//引入头部导航条
+import List from '../lib/List.js';//引入列表组件
 export default class CustomComponents extends Component{
     constructor(props){
         super(props);
@@ -30,7 +26,7 @@ export default class CustomComponents extends Component{
                         this.props.navigator.push({
                             component:DemoView,
                             backNavName:'查看IOS组件',
-                            title:'图片slider'
+                            title:'imgSlider'
                         })
                       }}
                     />
