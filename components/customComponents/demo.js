@@ -5,23 +5,21 @@
 import React,{
     View,
     Text,
-    Component
+    Component,
+    PropTypes
 } from 'react-native'
 /**
  * 导航条
  */
 import NavigationBar from '../lib/react-native-navigationbar/lib/index.js';//引入头部导航条
-/**
- * 组件
- */
-import List from '../lib/List.js';//引入列表组件
-import SliderGroup from '../lib/Slider.js';//引入图片浏览插件
+
 export default class DemoView extends Component{
     constructor(props){
         super(props);
+        console.log(props);
     }
-    static defaultProps={
-        targetComponent:<SliderGroup />
+    static PropTypes={
+        targetComponent:PropTypes.func.isRequired
     };
     render(){
         return(
