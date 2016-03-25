@@ -13,7 +13,7 @@ import React,{
 //引入博客webview
 import Blog from './webview/slashhuang.js';
 //引入自定义的IOS组件界面
-import CustomComponents from './customComponents/index.js';
+import CustomComponents from './customComponents/demoList.js';
 
 class HomePage extends Component {
     constructor(props) {

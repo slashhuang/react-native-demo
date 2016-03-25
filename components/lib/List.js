@@ -33,7 +33,7 @@ export default class List extends Component{
          */
         touchCallback:PropTypes.func,
         /**
-         * 是否disable功能
+         * 是否不允许点击
          */
         disabled:PropTypes.bool,
         /**
