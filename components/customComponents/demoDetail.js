@@ -1,6 +1,7 @@
 /**
  * Created by slashhuang on 16/3/24.
  * 展示demo细节
+ * 作为smartComponent传送props
  */
 import React,{
     View,
@@ -13,27 +14,32 @@ import React,{
  */
 import NavigationBar from '../lib/react-native-navigationbar/lib/index.js';//引入头部导航条
 
-export default class DemoView extends Component{
-    constructor(props){
+export default class DemoView extends Component {
+    constructor(props) {
         super(props);
-        console.log(props);
     }
-    static PropTypes={
-        targetComponent:PropTypes.func.isRequired
+
+    static PropTypes = {
+        targetComponent: PropTypes.func.isRequired
     };
-    render(){
-        return(
-            <View>
+
+    render() {
+        let RenderComponent = this.props.tabBar ? this.props.targetComponent :
+            <View style={{flex:1}}>
                 <NavigationBar
                     title={this.props.title}
                     IsBackText={true}
                     backName={`组件列表`}
-                    backFunc={()=>{this.props.navigator.pop()}}
+                    backFunc={()=>{
+                            console.log(this)
+
+                    this.props.navigator.pop()
+                    }}
                     />
                 <View style={{flex:1}}>
                     {this.props.targetComponent}
-                </View>
+                 </View>
             </View>
-        );
+        return RenderComponent;
     }
 }

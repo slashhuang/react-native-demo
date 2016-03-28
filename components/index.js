@@ -17,15 +17,19 @@ import CustomComponents from './customComponents/demoList.js';
 
 class HomePage extends Component {
     constructor(props) {
-        super(props)
+        super(props);
+        this.touchConfigs={
+            underlayColor:'#222',//触摸操作，显示的底层颜色
+            delayLongPress:1000//延迟长按相应时间
+        };
     }
-    jumpToWebWiew(){
+    jumpToWebWiew(url){
         /**
          * @ TODO 改变navigation title颜色
          */
        this.props.navigator.push({
             component:Blog,
-            url:'http://slashhuang.github.io'
+            url:url
         })
     }
     jumpToCustomItems(){
@@ -35,14 +39,13 @@ class HomePage extends Component {
        })
 
     }
-    longPress(){
-        alert('simulate longPress')
-    }
     /**
      * resizeMode只有contain cover stretch
      * @return {XML}
      */
     render() {
+       const slash = 'http://slashhuang.github.io';
+       const team ='http://uedfamily.com/';
         return (
             <View style={styles.container}>
                 <View style={styles.headerWrapper}>
@@ -63,25 +66,30 @@ class HomePage extends Component {
                             你以为我刀枪不入， 我以为你百毒不侵。</Text>
                         <Text style={styles.dateAuthor}>作者:徐志摩</Text>
                     </View>
+                    <View style={styles.touchHighLight}>
+                        <TouchableHighlight
+                            {...this.touchConfigs}
+                            style={styles.touchHighLight}
+                            onPress={this.jumpToWebWiew.bind(this,'')}>
+                            <Text style={styles.toHistory}>
+                                查看future-team技术博客
+                            </Text>
+                        </TouchableHighlight>
+                        <TouchableHighlight
+                            {...this.touchConfigs}
+                            style={styles.touchHighLight}
+                            onPress={this.jumpToWebWiew.bind(this,slash)}>
+                            <Text style={styles.toHistory}>
+                                查看踩坑过程
+                            </Text>
+                        </TouchableHighlight>
+                    </View>
                     <TouchableHighlight style={styles.touchHighLight}
                                         underlayColor={'#222'}//触摸操作，显示的底层颜色
                                         delayLongPress={1000}//延迟长按相应时间
-                                        onPress={this.jumpToWebWiew.bind(this)}
-                                        onLongPress={this.longPress}
+                                        onPress={this.jumpToCustomItems.bind(this,team)}
                         >
-                        <View>
-                            <Text style={styles.toHistory}>查看作者其他博客</Text>
-                        </View>
-                    </TouchableHighlight>
-                    <TouchableHighlight style={styles.touchHighLight}
-                                        underlayColor={'#222'}//触摸操作，显示的底层颜色
-                                        delayLongPress={1000}//延迟长按相应时间
-                                        onPress={this.jumpToCustomItems.bind(this)}
-                                        onLongPress={this.longPress}
-                        >
-                        <View>
                             <Text style={styles.toHistory}>查看IOS组件</Text>
-                        </View>
                     </TouchableHighlight>
                 </View>
             </View>
