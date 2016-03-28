@@ -23,13 +23,14 @@ class HomePage extends Component {
             delayLongPress:1000//延迟长按相应时间
         };
     }
-    jumpToWebWiew(url){
+    jumpToWebWiew(url,title){
         /**
          * @ TODO 改变navigation title颜色
          */
        this.props.navigator.push({
             component:Blog,
-            url:url
+            url:url,
+            title:title
         })
     }
     jumpToCustomItems(){
@@ -45,7 +46,7 @@ class HomePage extends Component {
      */
     render() {
        const slash = 'http://slashhuang.github.io';
-       const team ='http://uedfamily.com/';
+       const team ='http://uedfamily.com';
         return (
             <View style={styles.container}>
                 <View style={styles.headerWrapper}>
@@ -59,31 +60,34 @@ class HomePage extends Component {
                 </View>
                 <View style={styles.content}>
                     <View style={styles.idioms}>
-                        <Text style={styles.personalText}>我的世界太过安静， 静得可以听见自己心跳的声音。
+                        <Text style={styles.personalText}
+                              numberOfLines={5}
+                            >我的世界太过安静， 静得可以听见自己心跳的声音。
                             心房的血液慢慢流回心室， 如此这般的轮回。
                             聪明的人，喜欢猜心 ，也许猜对了别人的心 ，却也失去了自己的 。
                             傻气的人，喜欢给心 ，也许会被人骗 ，却未必能得到别人的 。
                             你以为我刀枪不入， 我以为你百毒不侵。</Text>
                         <Text style={styles.dateAuthor}>作者:徐志摩</Text>
                     </View>
-                    <View style={styles.touchHighLight}>
-                        <TouchableHighlight
-                            {...this.touchConfigs}
-                            style={styles.touchHighLight}
-                            onPress={this.jumpToWebWiew.bind(this,'')}>
-                            <Text style={styles.toHistory}>
-                                查看future-team技术博客
-                            </Text>
-                        </TouchableHighlight>
-                        <TouchableHighlight
-                            {...this.touchConfigs}
-                            style={styles.touchHighLight}
-                            onPress={this.jumpToWebWiew.bind(this,slash)}>
-                            <Text style={styles.toHistory}>
-                                查看踩坑过程
-                            </Text>
-                        </TouchableHighlight>
-                    </View>
+
+                    <TouchableHighlight
+                        {...this.touchConfigs}
+                        style={styles.touchHighLight}
+                        onPress={this.jumpToWebWiew.bind(this,team,'future-team')}>
+                        <Text style={styles.toHistory}>
+                            查看future-team技术博客
+                        </Text>
+                    </TouchableHighlight>
+
+                    <TouchableHighlight
+                        {...this.touchConfigs}
+                        style={styles.touchHighLight}
+                        onPress={this.jumpToWebWiew.bind(this,slash,'黄先生的技术博客')}>
+                        <Text style={styles.toHistory}>
+                            查看踩坑过程
+                        </Text>
+                    </TouchableHighlight>
+
                     <TouchableHighlight style={styles.touchHighLight}
                                         underlayColor={'#222'}//触摸操作，显示的底层颜色
                                         delayLongPress={1000}//延迟长按相应时间
@@ -134,13 +138,13 @@ var styles = StyleSheet.create({
     },
     idioms:{
         flex:3,
-        paddingLeft:10,
-        paddingRight:10,
+        paddingHorizontal:10,
+        paddingVertical:17,
         marginTop:17,
         marginBottom:17,
         backgroundColor: '#434243',
         alignItems: 'center',
-        justifyContent: 'center',
+        justifyContent: 'flex-start',
     },
     personalText:{
         color:'#fff',
@@ -156,7 +160,7 @@ var styles = StyleSheet.create({
     },
     touchHighLight:{
         flex:1,
-        marginBottom:17,
+        marginBottom:10,
         backgroundColor: '#434243',
         alignItems: 'center',
         justifyContent: 'center'

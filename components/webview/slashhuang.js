@@ -68,7 +68,7 @@ export default class Blog extends Component{
         return (
             <View style={{flex: 1}}>
                 <NavigationBar
-                    title={'黄先生的个人博客'}
+                    title={this.props.title}
                     IsBackText={true}
                     statusbarPadding={true}
                     backFunc = {()=>{this.props.navigator.pop()}}
