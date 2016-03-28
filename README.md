@@ -19,9 +19,11 @@
 ```
 #### 效果图
 <div style={width:100%;}}>
-<img src='./Assets/index.jpg' width='50%'>
+<img src='./Assets/index.png' width='50%'>
+<img src='./Assets/componentlist.png' width='50%'>
 <img src='./Assets/imgSlider.jpg' width='50%'>
 <img src='./Assets/webview.jpg' width='50%'>
+<img src='./Assets/tabbar.png' width='50%'>
 </div>
 
 
