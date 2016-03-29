@@ -7,7 +7,8 @@ import React,{
     StyleSheet,
     Text,
     Image,
-    TouchableHighlight
+    TouchableHighlight,
+    Animated
 } from 'react-native';
 
 //引入博客webview
@@ -22,6 +23,22 @@ class HomePage extends Component {
             underlayColor:'#222',//触摸操作，显示的底层颜色
             delayLongPress:1000//延迟长按相应时间
         };
+        this.state={
+            fadeAnim:new Animated.Value(0.3)
+        }
+    }
+
+    /**
+     * 增加对animation属性的测试
+     */
+    componentDidMount() {
+        Animated.timing(       // Uses easing functions
+            this.state.fadeAnim, // The value to drive
+            {
+                toValue: 1,        // Target
+                duration: 1000,    // Configuration
+            }
+        ).start();             // Don't forget start!
     }
     jumpToWebWiew(url,title){
         /**
@@ -49,7 +66,10 @@ class HomePage extends Component {
        const team ='http://uedfamily.com';
         return (
             <View style={styles.container}>
-                <View style={styles.headerWrapper}>
+                <Animated.View style={
+                [styles.headerWrapper,
+                {opacity: this.state.fadeAnim}]
+                }>
                     <Image source={{uri:'http://imga1.pic21.com/bizhi/140226/07916/s04.jpg'}}
                            style={styles.image}
                            resizeMode={Image.resizeMode.cover}
@@ -57,8 +77,8 @@ class HomePage extends Component {
                     <View style={styles.composerView}>
                         <Text style={styles.author}>作者:slashhuang</Text>
                     </View>
-                </View>
-                <View style={styles.content}>
+                </Animated.View>
+                <Animated.View style={styles.content}>
                     <View style={styles.idioms}>
                         <Text style={styles.personalText}
                               numberOfLines={5}
@@ -95,7 +115,7 @@ class HomePage extends Component {
                         >
                             <Text style={styles.toHistory}>查看IOS组件</Text>
                     </TouchableHighlight>
-                </View>
+                </Animated.View>
             </View>
         );
     }

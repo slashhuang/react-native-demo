@@ -18,6 +18,7 @@ import SliderGroup from '../lib/Slider.js';//引入图片浏览插件
 import ImageDemo from '../lib/Image.js';//引入图片布局
 import TabBarExample from '../lib/TabBarIOS.js';//引入导航切换
 import LayoutExample from '../lib/Layout.js';//引入布局组件
+import AnimationExample from '../lib/Animation.js';//引入动画组件
 
 export default class CustomComponents extends Component{
     constructor(props){
@@ -61,6 +62,9 @@ export default class CustomComponents extends Component{
                     />
                 <List title='底部导航切换TabBarIOS'
                       touchCallback={()=>this.passPropsParam.call(this,'tab切换',TabBarExample,true)}
+                    />
+                <List title='IOS动画'
+                      touchCallback={()=>this.passPropsParam.call(this,'ReactNative动画',AnimationExample)}
                     />
             </View>
         );

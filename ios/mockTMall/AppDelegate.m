@@ -42,7 +42,10 @@
    */
 
 //   jsCodeLocation = [[NSBundle mainBundle] URLForResource:@"main" withExtension:@"jsbundle"];
-
+  /**
+   * 睡眠1秒
+   */
+  sleep(2);
   RCTRootView *rootView = [[RCTRootView alloc] initWithBundleURL:jsCodeLocation
                                                       moduleName:@"mockTMall"
                                                initialProperties:nil
