@@ -24,7 +24,7 @@ class AnimationDemo extends Component {
             fadeAnimText0: new Animated.Value(0),
             fadeAnimText1: new Animated.Value(0),
             fadeAnimLayout: new Animated.Value(1),
-            animtext:new Animated.Value(0)
+            animtext:new Animated.Value(1)
         })
     }
     componentDidMount () {
@@ -149,7 +149,7 @@ class AnimationDemo extends Component {
                             ]})}]
                    }
             ]}>
-                    <Text style={styles.footerText}>{this.state.isPlaying?'我马上动了':'我动完了'}!</Text>
+                    <Text style={styles.footerText}>{this.state.isPlaying?'我动了':'我动完了'}!</Text>
                 </Animated.View>
             </Animated.View>
         )

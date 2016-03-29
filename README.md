@@ -3,6 +3,8 @@
 
 - Navigator   路由
 - WebView     网页  
+- Animated    动画
+- TabBarIOS   导航切换栏
 - TouchableHighlight   点按动作
 - View  布局
 - Text 文本
