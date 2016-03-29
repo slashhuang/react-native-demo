@@ -26,7 +26,7 @@ var swiper = React.createClass({
                 <Swiper style={styles.wrapper}
                         height={200}
                         horizontal={true}
-                        autoplayTimeout={1.5}
+                        autoplayTimeout={0.8}
                         autoplay={true}
                         dot={<View style={{backgroundColor:'rgba(255,255,255,0.5)', width: 8, height: 8,borderRadius: 10, margin:6,}} />}
                         activeDot={<View style={{backgroundColor: '#FF9E35', width: 10, height: 10, borderRadius: 10, margin:6}} />}

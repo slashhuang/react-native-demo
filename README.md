@@ -19,11 +19,11 @@
 ```
 #### 效果图
 <div style={width:100%;}}>
-<img src='./Assets/index.png' width='50%'>
-<img src='./Assets/componentlist.png' width='50%'>
-<img src='./Assets/imgSlider.jpg' width='50%'>
-<img src='./Assets/webview.jpg' width='50%'>
-<img src='./Assets/tabbar.png' width='50%'>
+<img src='./Assets/readme/indexapp.gif' width='50%'>
+<img src='./Assets/readme/webview.gif' width='50%'>
+<img src='./Assets/readme/animation.gif' width='50%'>
+<img src='./Assets/readme/tabbar.gif' width='50%'>
+<img src='./Assets/readme/textinput.gif' width='50%'>
 </div>
 
 
