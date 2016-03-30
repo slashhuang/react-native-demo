@@ -20,13 +20,37 @@
   
 ```
 #### 效果图
-<div style={width:100%;}}>
+<div style＝"width:100%">
+<div style='width:50%;float:'left'>
+主页入口－flex布局
 <img src='./Assets/readme/indexapp.gif' width='300px'>
-<img src='./Assets/readme/animation.gif' width='300px'>
+</div>
+<div style='width:50%;float:'left'>
+WebView页面
 <img src='./Assets/readme/webview.gif' width='300px'>
+</div>
+</div>
+
+<div style＝"width:100%">
+<div style='width:50%;float:'left'>
+TabBarIOS
 <img src='./Assets/readme/tabbar.gif' width='300px'>
+</div>
+<div style='width:50%;float:'left'>
+Animated动画
+<img src='./Assets/readme/animation.gif' width='300px'>
+</div>
+</div>
+
+<div style＝"width:100%">
+<div style='width:50%;float:'left'>
+调用本地API
 <img src='./Assets/readme/cameraRoll.gif' width='300px'>
+</div>
+<div style='width:50%;float:'left'>
+调用本地API
 <img src='./Assets/readme/textinput.gif' width='300px'>
+</div>
 </div>
 
 
