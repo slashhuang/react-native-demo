@@ -21,26 +21,28 @@
 ```
 #### 效果图
 
->主页入口－flex布局   WebView页面
+>主页入口－flex布局   
 
-<div style＝"width:100%">
 <img src='./Assets/readme/indexapp.gif' width='300px'>
 
+>WebView页面
+
 <img src='./Assets/readme/webview.gif' width='300px' style='margin-left:50px'>
-</div>
 
->TabBarIOS   Animated动画
+>TabBarIOS 
 
-<div style＝"width:100%">
 <img src='./Assets/readme/tabbar.gif' width='300px'>
+
+>  Animated动画
+
 <img src='./Assets/readme/animation.gif' width='300px'>
-</div>
+
+>TextInput
+
+<img src='./Assets/readme/textinput.gif' width='300px'>
 
 >调用本地API
 
-<div style＝"width:100%">
 <img src='./Assets/readme/cameraRoll.gif' width='300px'>
-<img src='./Assets/readme/textinput.gif' width='300px'>
-</div>
 
 
