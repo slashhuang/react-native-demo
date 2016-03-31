@@ -3,7 +3,6 @@
 
 - Navigator   路由
 - WebView     网页  
-- Animated    动画
 - TabBarIOS   导航切换栏
 - TouchableHighlight   点按动作
 - View  布局
@@ -11,7 +10,12 @@
 - react-native-swiper 图片浏览
 - 自定义组件 
 
-### 首页展示了自定义的IOS组件和Webview入口
+> 本项目综合了如下react-native的API
+
+－ Animated   动画
+-  fetch     网络请求
+－ Alert     模拟html的alert
+-  CameraRoll  调用本地照片
 
 ### 使用
 ```
