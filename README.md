@@ -41,8 +41,13 @@
 
 <img src='./Assets/readme/textinput.gif' width='300px'>
 
+>调用fetch网络请求
+
+<img src='./Assets/readme/network.gif' width='300px'>
+
 >调用本地API
 
 <img src='./Assets/readme/cameraRoll.gif' width='300px'>
+
 
 

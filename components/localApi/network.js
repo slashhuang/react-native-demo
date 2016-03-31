@@ -50,7 +50,6 @@ export default class httpDemo extends Component{
         /**
          * 模拟网络请求
          */
-        let that = this;
         this.setTimeout(()=>{
             fetch(fetchUrl,{method: 'GET'})
                 .then((response)=>response.json())
@@ -61,7 +60,7 @@ export default class httpDemo extends Component{
                     Alert.alert('出错了');
                     Object.assign(targetState[type],{loading:false});
                     this.setState(targetState)
-                })},5000);
+                })},500);
     }
 
     /**
