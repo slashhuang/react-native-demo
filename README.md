@@ -12,9 +12,9 @@
 
 > 本项目综合了如下react-native的API
 
-－ Animated   动画
+- Animated   动画
 -  fetch     网络请求
-－ Alert     模拟html的alert
+- Alert     模拟html的alert
 -  CameraRoll  调用本地照片
 
 ### 使用
