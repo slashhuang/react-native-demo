@@ -8,7 +8,8 @@ import React,{
     Text,
     Image,
     TouchableHighlight,
-    Animated
+    Animated,
+    Navigator
 } from 'react-native';
 
 //引入博客webview

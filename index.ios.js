@@ -25,9 +25,11 @@ class mockTMall extends Component {
           tintColor='#cccccc'
           barTintColor='#cccccc'
           initialRoute={{ name: 'indexPage', component: IndexPage }}
-          configureScene={(route) => {
           //切换界面方式
-            return Navigator.SceneConfigs.HorizontalSwipeJump;
+          configureScene={(route) => {
+            let  gestureType = Navigator.SceneConfigs.HorizontalSwipeJump;
+            gestureType.gestures=null;
+             return gestureType
           }}
           renderScene={(route, navigator) => {
             let Component = route.component;

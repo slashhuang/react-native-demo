@@ -23,6 +23,7 @@ import LayoutExample from '../lib/Layout.js';//引入布局组件
  */
 import AnimationExample from '../localApi/Animation.js';//引入动画组件
 import CameraRollDemo from '../localApi/CameraRoll.js';//引入本地图片库
+import httpDemo from '../localApi/network.js';//引入网络请求组件
 
 export default class CustomComponents extends Component{
     constructor(props){
@@ -72,6 +73,9 @@ export default class CustomComponents extends Component{
                     />
                 <List title='获取本地图片'
                       touchCallback={()=>this.passPropsParam.call(this,'获取本地图片',CameraRollDemo)}
+                    />
+                <List title='网络请求'
+                      touchCallback={()=>this.passPropsParam.call(this,'获取Github信息',httpDemo)}
                     />
             </View>
         );
