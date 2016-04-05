@@ -147,7 +147,7 @@ class AnimationDemo extends Component {
                                     outputRange: [
                                     '0deg', '180deg' // 'deg' or 'rad'
                             ]})}]
-                   }
+                  }
             ]}>
                     <Text style={styles.footerText}>{this.state.isPlaying?'我动了':'我动完了'}!</Text>
                 </Animated.View>
