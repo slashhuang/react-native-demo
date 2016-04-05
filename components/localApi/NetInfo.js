@@ -10,6 +10,8 @@ import React,{
     PixelRatio,
     Component
 } from 'react-native';
+var TimerMixin = require('react-timer-mixin');
+
 export default class NetInfoDemo extends Component{
     constructor(){
         super();
@@ -19,15 +21,18 @@ export default class NetInfoDemo extends Component{
         }
     }
     handleConnectivityChange(reach) {
-        console.dir(arguments);
        this.setState({
            info:reach
        })
     }
     handleConnecChange(reach) {
-        this.setState({
-            isConnected:reach
-        })
+        this.setTimeout(
+            ()=>{
+                this.setState({
+                    isConnected:reach
+                })
+            } ,0
+        )
     }
 
     /**
@@ -97,6 +102,7 @@ export default class NetInfoDemo extends Component{
 
     }
 }
+Object.assign(NetInfoDemo.prototype,TimerMixin);
 
 var netInfoStyle=StyleSheet.create({
     clickPart:{
