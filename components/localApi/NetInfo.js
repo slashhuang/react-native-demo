@@ -31,7 +31,7 @@ export default class NetInfoDemo extends Component{
                 this.setState({
                     isConnected:reach
                 })
-            } ,0
+            } ,200
         )
     }
 

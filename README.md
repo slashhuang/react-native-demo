@@ -49,6 +49,10 @@
 
 <img src='./Assets/readme/network.gif' width='300px'>
 
+>调用NetInfo获取网络状态
+
+<img src='./Assets/readme/netInfo.gif' width='300px'>
+
 >调用本地API
 
 <img src='./Assets/readme/cameraRoll.gif' width='300px'>
